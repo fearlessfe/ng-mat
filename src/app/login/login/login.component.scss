@@ -1,0 +1,19 @@
+mat-card {
+    height: 25em;
+
+    flex: 0 0 20em;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.text-right {
+    margin: 10px;
+    text-align: end;
+}

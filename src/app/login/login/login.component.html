@@ -1,0 +1,38 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form, $event)">
+  <mat-card>
+    <mat-card-header>
+        <mat-card-title>登录</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <mat-form-field class="full-width">
+          <input matInput type="text" placeholder="your email" formControlName="email">
+          <mat-error>{{form.controls['email'].errors | json}}</mat-error>
+      </mat-form-field>
+      <mat-form-field  floatLabel="float" class="full-width">
+          <input matInput type="password" placeholder="your password" formControlName="password">
+      </mat-form-field>
+      <button mat-raised-button color="accent" type="submit" [disabled]="!form.valid">登录</button>
+    </mat-card-content>
+    <mat-card-actions class="text-right">
+      <p>还没有账户？<a routeLink="/register">注册</a></p>
+      <p>忘记密码？<a href="">找回</a></p>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+        <mat-card-title>
+          每日佳句
+        </mat-card-title>
+        <mat-card-subtitle>
+          按时打算发发发发
+        </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/img/quote_fallback.jpg" alt="">
+    <mat-card-content>
+        afeafa sk a fa a kakajfkaeeu iua  aia aeiae ueau iuikj
+    </mat-card-content>
+
+  </mat-card>
+</form>

@@ -1,0 +1,37 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form,$event)">
+    <mat-card>
+      <mat-card-header>
+          <mat-card-title>注册</mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <mat-form-field class="full-width">
+            <input matInput type="text" placeholder="your email" formControlName="email">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input matInput type="text" placeholder="your name" formControlName="name">
+        </mat-form-field>
+        <mat-form-field  floatLabel="float" class="full-width">
+            <input matInput type="password" placeholder="your password" formControlName="password">
+        </mat-form-field>
+        <mat-form-field  floatLabel="float" class="full-width">
+            <input matInput type="password" placeholder="repeat your password" formControlName="repeat">
+        </mat-form-field>
+        <app-image-list-select
+          [useSvgIcon]="true"
+          [cols]="6"
+          [title]="'选择头像：'"
+          [items]="items"
+          formControlName="avatar">  
+        </app-image-list-select>
+        <app-age-input formControlName="dateOfBirth"></app-age-input>
+        <button mat-raised-button color="accent" type="submit">注册</button>
+      </mat-card-content>
+      <mat-card-actions class="text-right">
+        <p>已有账户？<a routeLink="/login">返回登录</a></p>
+        <p>忘记密码？<a href="">找回</a></p>
+      </mat-card-actions>
+    </mat-card>
+  
+
+  </form>
